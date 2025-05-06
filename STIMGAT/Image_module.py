@@ -1,11 +1,12 @@
 import numpy as np
 from PIL import Image
 
-def get_image(adata, library_id, img_key="hires"):
+def get_image(adata, img_key="hires"):
     """
     提取每个空间坐标点对应图像上的RGB值，并将这些RGB值存储为矩阵。
     """
 
+    library_id = list(adata.uns["spatial"].keys())[0]
     spatial_coords = adata.obsm["spatial"]  # shape: (n_cells, 2)
     image = adata.uns["spatial"][library_id]["images"][img_key]  # 图像数据 (H, W, 3)
     

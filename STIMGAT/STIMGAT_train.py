@@ -13,10 +13,10 @@ cudnn.benchmark = True
 
 
 
-from STIMGAT import STIMGAT
-from CL_module import permutation, add_contrastive_label, construct_interaction
-from utils import Transfer_pytorch_Data
-from Loss import Loss_bal
+from .STIMGAT import STIMGAT
+from .CL_module import permutation, add_contrastive_label, construct_interaction
+from .utils import Transfer_pytorch_Data
+from .Loss import Loss_bal
 
 
 

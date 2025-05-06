@@ -7,7 +7,8 @@ cudnn.deterministic = True
 cudnn.benchmark = True
 import torch.nn.functional as F
 from gat_conv import GATConv
-from CL_module import AvgReadout, Discriminator
+
+from .CL_module import AvgReadout, Discriminator
 
 class STIMGAT(torch.nn.Module):
     def __init__(self, hidden_dims):
